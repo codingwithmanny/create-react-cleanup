@@ -56,6 +56,7 @@ readFile(`${process.cwd()}/src/App.js`, async (error, content) => {
 
     writeFile(`${process.cwd()}/src/App.js`, file.join('\n'));
 
+    fs.mkdirSync(`${process.cwd()}/src/components`);
     fs.mkdirSync(`${process.cwd()}/src/components/App`);
 
     fs.rename(`${process.cwd()}/src/App.js`, `${process.cwd()}/src/components/App/index.js`, (error) => {
