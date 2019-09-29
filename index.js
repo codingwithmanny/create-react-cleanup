@@ -2,8 +2,7 @@
 // DEPENDENCIES
 const chalk = require('chalk');
 const fs = require('fs');
-const util = require('util');
-const filesToDelete = [`${process.cwd()}/src/logo.svg`, `${process.cwd()}/src/index.css`, `${process.cwd()}/src/App.css`];
+const filesToDelete = [`${process.cwd()}/src/logo.svg`, `${process.cwd()}/src/index.css`, `${process.cwd()}/src/App.css`, `${process.cwd()}/src/App.test.js`];
 
 console.log(chalk.green('🧹 Cleaning up Create React App...\n'));
 
@@ -57,9 +56,9 @@ readFile(`${process.cwd()}/src/App.js`, async (error, content) => {
 
     writeFile(`${process.cwd()}/src/App.js`, file.join('\n'));
 
-    fs.mkdirSync(`${process.cwd()}/src/components`);
+    fs.mkdirSync(`${process.cwd()}/src/components/App`);
 
-    fs.rename(`${process.cwd()}/src/App.js`, `${process.cwd()}/src/components/App.js`, (error) => {
+    fs.rename(`${process.cwd()}/src/App.js`, `${process.cwd()}/src/components/App/index.js`, (error) => {
         if (error) throw Error('Could not move App.js');
         console.log(chalk.magenta(`\n/src/App.js -> /src/components/App.js`));
 
