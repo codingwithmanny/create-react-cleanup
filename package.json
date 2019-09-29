@@ -1,0 +1,10 @@
+{
+  "name": "create-react-cleanup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mpineault/create-react-cleanup",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  }
+}
